@@ -73,13 +73,18 @@ canonical landing point for getting (re-)oriented on the state of LLM research a
 
 ## Notes
 
-- Full PDF added manually by the user on 2026-05-26 and stored under
-  `library/llms-and-agents/pdfs/zhao-2026-survey-of-llms.pdf`
-  (Git LFS). Agents must not read the PDF directly — extract any needed quotes by hand
-  into this file or into synthesis files.
-- The Springer landing page is auth-walled. The abstract above came from the public
-  CrossRef record for the DOI.
-- The same research group has maintained an open arXiv companion (2303.18223) that mirrors
-  much of this content with frequent revisions; cite it separately if used.
-- The author list is led by Wayne Xin Zhao and Ji-Rong Wen (Renmin University of China).
-  Most co-authors are from RUC; Jian-Yun Nie is from Université de Montréal.
+- Full PDF stored under `library/llms-and-agents/pdfs/zhao-2026-survey-of-llms.pdf`
+  (Git LFS). Agents must not read the PDF directly.
+- **Full markdown dump** of the PDF body is available at
+  `library/llms-and-agents/sources/zhao-2026-survey-of-llms/zhao-2026-survey-of-llms.md`
+  (plus a `_meta.json` and extracted figure JPEGs in the same folder). This is what
+  synthesis files draw on. The Springer landing page is auth-walled; the abstract
+  above came from the public CrossRef record.
+- The same research group has maintained an open arXiv companion (2303.18223) that
+  mirrors much of this content with frequent revisions; cite it separately if used.
+  The survey itself notes (§1) that it is an updated/refined version of that arXiv
+  article, with a separate Springer book companion (link.springer.com/book/10.1007/
+  978-981-96-6259-3, 2026).
+- Author list led by Wayne Xin Zhao and Ji-Rong Wen (Renmin University of China,
+  Gaoling School of AI). Most co-authors RUC; Jian-Yun Nie is Université de Montréal.
+- Accepted March 17, 2026; published 2026-05-09. Vol 20 issue 12.
