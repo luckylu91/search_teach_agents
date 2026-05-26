@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Bash(ls:*)",
+      "Bash(rg:*)",
+      "Bash(find:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ],
+    "deny": []
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // empty'); case \"$f\" in *\"/library/\"*\"/pdfs/\"*.pdf) echo \"Blocked: agents must not read PDFs under library/<domain>/pdfs/. They are LFS-backed binaries for human consumption. Read the corresponding .md under library/<domain>/sources/ instead.\" >&2; exit 2 ;; esac"
+          }
+        ]
+      }
+    ]
+  }
+}
